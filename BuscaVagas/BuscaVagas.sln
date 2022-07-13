@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaVagas", "BuscaVagas.csproj", "{A57EB205-4A3D-4159-89BD-96BBA592F228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A57EB205-4A3D-4159-89BD-96BBA592F228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57EB205-4A3D-4159-89BD-96BBA592F228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57EB205-4A3D-4159-89BD-96BBA592F228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57EB205-4A3D-4159-89BD-96BBA592F228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {580E8037-AD0A-4C6D-84B6-1DC061CEE264}
+	EndGlobalSection
+EndGlobal
