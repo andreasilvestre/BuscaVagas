@@ -1,7 +1,12 @@
-﻿namespace BuscaVagas.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BuscaVagas.Models
 {
+    [Table("Empresa")]
     public class Empresa
     {
+        [Key()]
         public string Cnpj { get; set; }
         public string Nome { get; set; }
         public string Telefone { get; set; }
