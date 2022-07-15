@@ -15,12 +15,13 @@ namespace BuscaVagas.Controllers
 
         public IActionResult Index()
         {
-            Empresa empresa = new Empresa();
-            empresa.Nome = "Atos Brasil Soluções";
-            empresa.Email = "ana_carolina@atos.com.br";
-            empresa.Telefone = "35-99892-6483";
+            //Empresa empresa = new Empresa();
+            //empresa.Nome = "Atos Brasil Soluções";
+            //empresa.Email = "ana_carolina@atos.com.br";
+            //empresa.Telefone = "35-99892-6483";
 
-            return View(empresa);
+            //return View(empresa);
+            return View();
         }
 
         public IActionResult Privacy()

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BuscaVagas.Models
 {
-    [Table("Vagas")]
+    [Table("Vaga")]
     public class Vaga
     {
         [Key()] //forçando que Id é chave primária
@@ -19,7 +19,6 @@ namespace BuscaVagas.Models
                                          //Analista de suporte
         public string Nivel { get; set; } // junior, pleno, senior ou lider
 
-        //public string Area { get; set; } //  Desenvolvimento, Testes, Redes, Banco de Dados, etc
         public string Tecnologia { get; set; } // seelcionar uma apenas - combo, a master - dotNet, Java, Python, PHP, Oracle, SQL Server, etc
         public string Cidade { get; set; } // Cidade ou HomeOffice
         public string Estado { get; set; } 
