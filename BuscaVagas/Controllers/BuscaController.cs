@@ -40,7 +40,6 @@ namespace BuscaVagas.Controllers
             var buscaVagasContext = _context.Vaga.Include(v => v.Empresa);
             return View(await buscaVagasContext.ToListAsync());
         }
-
       
     }
 }
