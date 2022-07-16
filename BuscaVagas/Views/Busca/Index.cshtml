@@ -1,0 +1,51 @@
+﻿@model BuscaVagas.Models.Vaga
+
+@{
+    ViewData["Title"] = "Busca";
+}
+
+<h1>Busca</h1>
+
+<h4>Vaga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="p-3 mb-2 bg-warning text-dark">
+        <form asp-action="Busca">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Cargo" class="control-label"></label>
+                <select asp-for="Cargo" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Nivel" class="control-label"></label>
+                <select asp-for="Nivel" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Tecnologia" class="control-label"></label>
+                <select asp-for="Tecnologia" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Cidade" class="control-label"></label>
+                <select asp-for="Cidade" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Busca" class="btn btn-primary" />
+            </div>
+        </form>
+        </div>
+    </div>
+</>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

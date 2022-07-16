@@ -59,13 +59,22 @@ namespace BuscaVagas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Cnpj,Cargo,Nivel,Tecnologia,Cidade,Estado")] Vaga vaga)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(vaga);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+
+                //if (ModelState.IsValid)
+               // {
+                    _context.Add(vaga);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                //}
+                ViewData["Cnpj"] = new SelectList(_context.Empresa, "Cnpj", "Cnpj", vaga.Cnpj);
             }
-            ViewData["Cnpj"] = new SelectList(_context.Empresa, "Cnpj", "Cnpj", vaga.Cnpj);
+            catch(Exception ex)
+            {
+
+            }
             return View(vaga);
         }
 
@@ -98,8 +107,8 @@ namespace BuscaVagas.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 try
                 {
                     _context.Update(vaga);
@@ -117,7 +126,7 @@ namespace BuscaVagas.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            //}
             ViewData["Cnpj"] = new SelectList(_context.Empresa, "Cnpj", "Cnpj", vaga.Cnpj);
             return View(vaga);
         }

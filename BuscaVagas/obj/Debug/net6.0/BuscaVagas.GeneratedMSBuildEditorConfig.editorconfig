@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Usuario/source/repos/BuscaVagas/BuscaVagas/Views/Busca/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzY2FcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/source/repos/BuscaVagas/BuscaVagas/Views/Empresas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wcmVzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

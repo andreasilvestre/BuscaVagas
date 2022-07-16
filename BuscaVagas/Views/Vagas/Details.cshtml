@@ -7,6 +7,7 @@
 <h1>Details</h1>
 
 <div>
+    <div class="p-3 mb-2 bg-danger text-white">
     <h4>Vaga</h4>
     <hr />
     <dl class="row">
@@ -47,6 +48,7 @@
             @Html.DisplayFor(model => model.Estado)
         </dd>
     </dl>
+    </div>  
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
