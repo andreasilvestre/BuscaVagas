@@ -16,22 +16,60 @@
            
             <div class="form-group">
                 <label asp-for="Cargo" class="control-label"></label>
-                <select asp-for="Cargo" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+                @*<select asp-for="Cargo" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
+                 <select class="form-select" id="Cargo" required>
+                    <option value="">Selecione...</option>
+                    <option value="Analista Programador">Analista Programador</option>
+                    <option value="Analista de Sistemas">Analista de Sistemas</option>
+                    <option value="Analista de Testes">Analista de Testes</option>
+                    <option value="Lider">Líder</option>
+                </select>
+
             </div>
 
             <div class="form-group">
                 <label asp-for="Nivel" class="control-label"></label>
-                <select asp-for="Nivel" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+                @*<select asp-for="Nivel" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
+
+                <select class="form-select" id="Nivel" required>
+                    <option value="">Selecione...</option>
+                    <option value="Junior">Júnior</option>
+                    <option value="Pleno">Pleno</option>
+                    <option value="Senior">Sênior</option>
+                </select>
+
+
             </div>
 
              <div class="form-group">
                 <label asp-for="Tecnologia" class="control-label"></label>
-                <select asp-for="Tecnologia" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+                @*<select asp-for="Tecnologia" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
+
+
+                <select class="form-select" id="Tecnologia" required>
+                    <option value="">Selecione...</option>
+                    <option value="dotnet">DotNet</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                    <option value="php">PHP</option>
+                    <option value="Oracle">Oracle</option>
+                    <option value="SQL Server">SQL Server</option>
+                </select>
+
             </div>
 
              <div class="form-group">
                 <label asp-for="Cidade" class="control-label"></label>
-                <select asp-for="Cidade" class ="form-control" asp-items="ViewBag.Cnpj"></select>
+                @*<select asp-for="Cidade" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
+
+                <select class="form-select" id="cidade" required>
+                    <option value="">Selecione...</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="Home Office">Home Office</option>
+                    <option value="São Sebastião do Paraíso">São Sebastião do Paraíso</option>
+                </select>
+
             </div>
            
             <div class="form-group">
