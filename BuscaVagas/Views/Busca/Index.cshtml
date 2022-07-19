@@ -1,4 +1,4 @@
-﻿@model BuscaVagas.Models.Vaga
+﻿@model BuscaVaga
 
 @{
     ViewData["Title"] = "Busca";
@@ -11,13 +11,13 @@
 <div class="row">
     <div class="col-md-4">
         <div class="p-3 mb-2 bg-warning text-dark">
-        <form asp-action="Busca">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
            
             <div class="form-group">
                 <label asp-for="Cargo" class="control-label"></label>
                 @*<select asp-for="Cargo" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
-                 <select class="form-select" id="Cargo" required>
+                 <select class="form-select" id="Cargo" required asp-for="Cargo">
                     <option value="">Selecione...</option>
                     <option value="Analista Programador">Analista Programador</option>
                     <option value="Analista de Sistemas">Analista de Sistemas</option>
@@ -31,7 +31,7 @@
                 <label asp-for="Nivel" class="control-label"></label>
                 @*<select asp-for="Nivel" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
 
-                <select class="form-select" id="Nivel" required>
+                <select class="form-select" id="Nivel" required asp-for="Nivel">
                     <option value="">Selecione...</option>
                     <option value="Junior">Júnior</option>
                     <option value="Pleno">Pleno</option>
@@ -46,7 +46,7 @@
                 @*<select asp-for="Tecnologia" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
 
 
-                <select class="form-select" id="Tecnologia" required>
+                <select class="form-select" id="Tecnologia" required asp-for="Tecnologia">
                     <option value="">Selecione...</option>
                     <option value="dotnet">DotNet</option>
                     <option value="java">Java</option>
@@ -62,7 +62,7 @@
                 <label asp-for="Cidade" class="control-label"></label>
                 @*<select asp-for="Cidade" class ="form-control" asp-items="ViewBag.Cnpj"></select>*@
 
-                <select class="form-select" id="cidade" required>
+                <select class="form-select" id="cidade" required asp-for="Cidade">
                     <option value="">Selecione...</option>
                     <option value="São Paulo">São Paulo</option>
                     <option value="Rio de Janeiro">Rio de Janeiro</option>
@@ -73,7 +73,8 @@
             </div>
            
             <div class="form-group">
-                <input type="submit" value="Busca" class="btn btn-primary" />
+                <input type="submit" value="Busca" class="btn btn-primary" asp-controller="Busca" asp-action="Resultado"/>
+                @*<a class="btn btn-success" asp-controller="Busca" asp-action="Index"></a>*@
             </div>
         </form>
         </div>

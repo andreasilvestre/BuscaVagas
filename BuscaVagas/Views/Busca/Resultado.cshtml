@@ -1,0 +1,93 @@
+﻿@model List<Vaga>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+@*<div class="p-3 mb-2 bg-success text-white">*@
+<div class="p-3 mb-2 bg-secondary text-white">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                CPNJ
+            </th>
+            <th>
+                Empresa
+            </th>
+            <th>
+                Representante
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Cargo
+            </th>
+            <th>
+                Nível
+            </th>
+            <th>
+                Tecnologia
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                Estado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Representante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tecnologia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+           @* <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>*@
+        </tr>
+}
+
+    </tbody>
+</table>
+</div>

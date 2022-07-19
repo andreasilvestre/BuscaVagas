@@ -8,7 +8,7 @@
 
         public string Tecnologia { get; set; }
         public string Cidade { get; set; }  //Home office ou cidade/estado
-        public string Estado { get; set; }  
+       //public string Estado { get; set; }  
 
         
     }

@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BuscaVagas.Data;
+using BuscaVagas.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BuscaVagas.Controllers
 {
     public class BuscaController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        private readonly BuscaVagasContext _context;
+
+        public BuscaController(BuscaVagasContext context)
+        {
+            _context = context;
+        }
+
 
         // GET: BuscaController
         public ActionResult Index()
@@ -22,17 +27,25 @@ namespace BuscaVagas.Controllers
         }
 
 
-        //// POST: BuscaController/Create
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Busca(IFormCollection collection)
-        //{
-        //    //adaptar e filtrar conforme os dados selecionados pelo usuario
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(BuscaVaga buscaVaga)
+        {
+           return View(Resultado(buscaVaga));
 
-        //    //var buscaVagasContext = _context.Vaga.Include(v => v.Empresa);
-        //    //return View(await buscaVagasContext.ToListAsync());
-        //}
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Resultado(BuscaVaga buscaVaga)
+        {
+
+            List<Vaga> vagas = _context.Vaga.Where(b => b.Cargo == buscaVaga.Cargo 
+            && b.Nivel == buscaVaga.Nivel 
+            && b.Tecnologia == buscaVaga.Tecnologia 
+            && b.Cidade == buscaVaga.Cidade).ToList();
+
+            return View(vagas);
+        }
 
     }
 }

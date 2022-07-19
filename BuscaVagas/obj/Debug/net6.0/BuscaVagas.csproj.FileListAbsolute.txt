@@ -276,3 +276,5 @@ C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\bin\Debug\net6.0\runtimes\wi
 C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\obj\Debug\net6.0\BuscaVagas.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Usuario\source\repos\BuscaVagas\BuscaVagas\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll

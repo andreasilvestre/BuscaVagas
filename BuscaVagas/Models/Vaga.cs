@@ -15,14 +15,13 @@ namespace BuscaVagas.Models
         public virtual Empresa Empresa { get; set; } //lazy load
 
         public string Cargo { get; set; } //Analista programador, Analista de sistemas,
-                                         //DBA, Analista de Testes, Analista de Redes,
-                                         //Analista de suporte
-        public string Nivel { get; set; } // junior, pleno, senior ou lider
+                                          //DBA, Analista de Testes, Analista de Redes,
+                                          //Analista de suporte
 
+        public string Nivel { get; set; }
         public string Tecnologia { get; set; } // seelcionar uma apenas - combo, a master - dotNet, Java, Python, PHP, Oracle, SQL Server, etc
         public string Cidade { get; set; } // Cidade ou HomeOffice
         public string Estado { get; set; } 
-
 
     }
 }
